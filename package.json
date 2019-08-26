@@ -1,0 +1,19 @@
+{
+  "name": "nyan",
+  "version": "1.0.0",
+  "description": "Not your average network.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moschetto/nyan.git"
+  },
+  "author": "Moschetto",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/moschetto/nyan/issues"
+  },
+  "homepage": "https://github.com/moschetto/nyan#readme"
+}
