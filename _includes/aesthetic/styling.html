@@ -1,0 +1,166 @@
+<link href="{{site_url}}/res/syntax.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+<style>
+
+    code {
+        font-family: 'Ubuntu Mono';
+        color: #818fa6;
+    }
+
+@font-face {
+    font-family: 'gohufontmedium';
+    src: url('{{ site.url }}/res/fonts/gohufont-11-webfont.woff2') format('woff2'),
+         url('{{ site.url }}res/fonts/gohufont-11-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html ,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'gohufontmedium', Helvetica, sans-serif;
+    font-size: 11px;
+    background-image: linear-gradient(to bottom, rgba(112, 112, 112, 0.52), rgba(44, 44, 44, 0.73)), url('{{ site.url }}/res/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+}
+
+.bar-root {
+    margin: 0;
+    padding: 0;
+    display: block;
+    background: black;
+    color: #fff;
+}
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    font-family: 'gohufontmedium', monospace;
+}
+
+.bar.col {
+    flex: 1;
+    display: inline-block;
+    border-bottom: .5px solid #fff;
+}
+
+.bar.col.info {
+    text-align: left;
+}
+
+.bar.col.cwd {
+    text-align: center;
+}
+
+.bar.col.navbar {
+    text-align: right;
+}
+
+.bar span {
+    color: gray;
+}
+
+.knob {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.knob img {
+    vertical-align: top;
+}
+
+.smallnavs {
+    margin-left: 50px;
+}
+
+.dash {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: .25s;
+}
+
+a:hover {
+    color: #4f6d9c;
+    text-shadow: 0px 0px 10px #4f6d9c;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+}
+
+.core {
+    margin-top: 3vh;
+    padding: 25px;
+    background-color: #000;
+    color: #fff;
+    border-top: .5px solid #fff;
+    border-bottom: .5px solid #fff;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    border-top: .5px solid #fff;
+    padding: 25px;
+}
+
+/* Scanlines */
+body:before {
+	content: "";
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+	background-image: url(/res/overlay.png);
+	background-repeat: all;
+	background-position: 0px 0px;
+	animation-name: Static;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(4);
+	box-shadow: inset 0px 0px 10em rgba(0,0,0,0.4);
+}
+
+body:after {
+	content: "";
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 1000;
+	background-image: url(/res/overlay2.png);
+	background-repeat: all;
+	background-position: 0px 0px;
+	animation-name: Static;
+	animation-duration: 0.8s;
+	animation-iteration-count: infinite;
+	animation-timing-function: steps(4);
+}
+
+@keyframes Static {
+	0% { background-position: 0px 0px; }
+	100% { background-position: 0px 4px; }
+}
+
+</style>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+    <title>{{ page.title }}</title>
+    {% include aesthetic/styling.html %}
+</head>
+<body>
+    <div class="bar-root">
+        {% include aesthetic/bar.html %}
+    </div>
+    <div class="dash">
+        <div class="knob">
+            <img src="{{ site.url }}/res/nyan.png"/>
+            <span class="smallnavs">
+                <img src="{{ site.url }}/res/projects.png"/>
+            </span>
+        </div>
+        <div class="core">
+            {{ page.title }}
+            <br/><br/>
+            <span style="color: gray">{{ page.date | date_to_long_string }}</span>
+        </div>
+        <div class="core">
+            {{ content }}
+        </div>
+    </div>
+    <div class="bar-root">
+        <div class="footer">
+            (c) copyright 2019, NYAN. not your average network!
+        </div>
+    </div>
+</body>
+</html>
